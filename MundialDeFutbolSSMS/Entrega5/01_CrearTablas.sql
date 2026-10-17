@@ -2,14 +2,10 @@
    Universidad Nacional de la Matanza
    Materia      : 3641 - Bases de Datos Aplicada
    Comisión     : 2900          Grupo: 07
-   Integrantes  : [Apellido, Nombre] - [Apellido, Nombre] - [Apellido, Nombre] - [Apellido, Nombre]
-   Fecha        : 15/10/2026
-   Objetivo     : Crear las 30 tablas del modelo con sus claves primarias, foraneas, unicidades y restricciones CHECK segun el DER.
+   Objetivo     : Crear las 30 tablas del modelo con sus claves primarias, foraneas, unicidades y restricciones CHECK
    ============================================================================= */
-
-/* Los comentarios previos a cada tabla indican a que parte del DER corresponde y cada AJUSTE/AGREGADO
-   respecto del DER. Reemplazo completo: primero se eliminan las tablas existentes (en orden inverso de
-   dependencias) y luego se crean. ATENCION: borra los datos de las tablas. */
+-- Reemplazo completo: primero se eliminan las tablas existentes (en orden inverso de
+ --  dependencias) y luego se crean. ATENCION: borra los datos de las tablas. */
 
 USE MundialFutbol;
 GO

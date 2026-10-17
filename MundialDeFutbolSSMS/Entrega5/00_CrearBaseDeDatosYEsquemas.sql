@@ -2,7 +2,6 @@
    Universidad Nacional de la Matanza
    Materia      : 3641 - Bases de Datos Aplicada
    Comisión     : 2900          Grupo: 07
-   Fecha        : 15/10/2026
    Objetivo     : Recrear la base de datos MundialFutbol (reemplazo completo) y crear sus esquemas: geo, personas, torneo y publicidad.
    ============================================================================= */
 
