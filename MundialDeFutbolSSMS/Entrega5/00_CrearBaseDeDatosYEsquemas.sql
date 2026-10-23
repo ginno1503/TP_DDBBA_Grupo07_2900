@@ -2,6 +2,7 @@
    Universidad Nacional de la Matanza
    Materia      : 3641 - Bases de Datos Aplicada
    Comisión     : 2900          Grupo: 07
+   Integrantes:  Ginno Verdecchia - Tiago Patri - Matias Ariel Espinoza - Juan Andres Leguizamón Sarmiento
    Objetivo     : Recrear la base de datos MundialFutbol (reemplazo completo) y crear sus esquemas: geo, personas, torneo y publicidad.
    ============================================================================= */
 

@@ -2,6 +2,7 @@
    Universidad Nacional de la Matanza
    Materia      : 3641 - Bases de Datos Aplicada
    Comisión     : 2900          Grupo: 07
+   Integrantes:  Ginno Verdecchia - Tiago Patri - Matias Ariel Espinoza - Juan Andres Leguizamón Sarmiento
    Objetivo     : Crear las 30 tablas del modelo con sus claves primarias, foraneas, unicidades y restricciones CHECK
    ============================================================================= */
 -- Reemplazo completo: primero se eliminan las tablas existentes (en orden inverso de
