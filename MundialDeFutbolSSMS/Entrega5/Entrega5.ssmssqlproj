@@ -3,7 +3,7 @@
   <Items>
     <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="localhost\SQLEXPRESS:DESKTOP-ME7MIDC\Daniel">
+        <ConnectionNode Name="localhost\SQLEXPRESS:ANDRESLEEN\golde">
           <Created>2026-10-16T22:43:00.9206578-03:00</Created>
           <Type>SQL</Type>
           <Server>localhost\SQLEXPRESS</Server>
