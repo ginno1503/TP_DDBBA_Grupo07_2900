@@ -463,3 +463,190 @@ BEGIN
     DELETE FROM publicidad.EspacioPublicitario WHERE id_partido = @id_partido AND nro = @nro;
 END;
 GO
+
+
+-- -------- PRIME TIME Simulacion --------------------------------------------------
+
+CREATE OR ALTER PROCEDURE publicidad.SimularPrimeTime
+    @id_partido int
+AS
+BEGIN 
+    
+    SET NOCOUNT ON 
+
+    DECLARE @utc DATETIME2(0); 
+
+    SELECT @utc = fecha_hora_utc
+    FROM torneo.Partido
+    WHERE id_partido = @id_partido; 
+
+    IF @utc IS NULL 
+        THROW 50001, 'El partido no existe', 1;
+
+    SELECT  nombre,
+            DATEADD(MINUTE,
+                CAST(huso_horario * 60 AS INT),
+                @utc) AS [Hora Local], 
+            CASE 
+                WHEN DATEPART(
+                        HOUR, 
+                        DATEADD(MINUTE,
+                                CAST(huso_horario * 60 AS INT),
+                                @utc)
+                    ) BETWEEN 19 AND 23
+                THEN 'SI'
+                ELSE 'NO'
+            END AS [Prime Time]
+    FROM geo.Pais
+    ORDER BY nombre
+
+END
+GO
+
+-- ASIGNACIÓN AUTOMÁTICA----------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+-- Para cada contenido se calcula un puntaje. 
+-- Se priorizan mercados correspondientes a las selecciones participantes (+1000), 
+-- luego mercados cuyo horario local coincide con prime time (+500) 
+-- y finalmente mercados con mayor PBI per cápita. 
+-- Los cuatro contenidos con mayor puntaje son asignados automáticamente a 
+-- los cuatro espacios publicitarios del partido.
+------------------------------------------------------------------------------------
+
+CREATE OR ALTER PROCEDURE publicidad.AsignarAutomaticamenteAPartido
+    @id_partido int
+AS
+BEGIN 
+    SET NOCOUNT ON 
+
+    DECLARE @pais1 INT,
+            @pais2 INT,
+            @utc DATETIME2(0),
+            @id_tarifa int;
+    
+    
+    SELECT
+        @utc = p.fecha_hora_utc,
+        @pais1 = s1.id_pais,
+        @pais2 = s2.id_pais
+    FROM torneo.Partido p
+    JOIN torneo.Seleccion s1  ON s1.id_seleccion = p.id_seleccion_1
+    JOIN torneo.Seleccion s2  ON s2.id_seleccion = p.id_seleccion_2
+    WHERE p.id_partido = @id_partido;
+
+    IF @utc IS NULL
+        THROW 50001,'Partido inexistente',1;
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM publicidad.EspacioPublicitario
+        WHERE id_partido = @id_partido
+    )
+        THROW 50001, 'El partido ya tiene publicidad asignada.', 1;
+    
+    -- RANKING
+    WITH Ranking AS
+    (
+        SELECT
+            cp.id_anunciante,
+            cp.cod_campania,
+            cp.cod_contenido,
+            SUM(
+                CASE
+                    WHEN cp.id_pais IN (@pais1,@pais2)
+                    THEN 1000
+                    ELSE 0
+                END
+                +
+                CASE
+                    WHEN DATEPART(
+                         HOUR,
+                         DATEADD(
+                           MINUTE,
+                           CAST(p.huso_horario * 60 AS INT),
+                           @utc
+                         )
+                         ) BETWEEN 19 AND 23
+                    THEN 500
+                    ELSE 0
+                END
+                +
+                ISNULL(p.pbi_per_capita,0)/1000
+            ) AS puntaje
+
+        FROM publicidad.ContenidoPais cp
+        JOIN geo.Pais p
+          ON p.id_pais = cp.id_pais
+
+        GROUP BY
+            cp.id_anunciante,
+            cp.cod_campania,
+            cp.cod_contenido
+    )
+
+    SELECT TOP 4 *
+    INTO #Top4 
+    FROM Ranking
+    ORDER BY puntaje DESC,
+            id_anunciante,
+            cod_campania,
+            cod_contenido;
+
+    -- Validación de exactamente 4 espacios publicitarios --
+    IF (SELECT COUNT(*) FROM #Top4) < 4
+        THROW 50001, 'No existen cuatro contenidos candidatos.', 1;
+
+    -- Tarifa --
+    SELECT TOP 1
+        @id_tarifa = id_tarifa
+    FROM publicidad.Tarifa
+    ORDER BY costo DESC;
+
+    IF @id_tarifa IS NULL
+    THROW 50001, 'No existe ninguna tarifa cargada.', 1;
+
+    -- Asignación final --
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        INSERT INTO publicidad.EspacioPublicitario
+        (
+            id_partido,
+            nro,
+            id_tarifa,
+            horario,
+            id_anunciante,
+            cod_campania,
+            cod_contenido
+        )
+        SELECT
+            @id_partido,
+            ROW_NUMBER() OVER
+            (
+                ORDER BY
+                    puntaje DESC,
+                    id_anunciante,
+                    cod_campania,
+                    cod_contenido
+            ),
+            @id_tarifa,
+            @utc,
+            id_anunciante,
+            cod_campania,
+            cod_contenido
+        FROM #Top4;
+
+        COMMIT TRANSACTION;
+
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH;
+
+    DROP TABLE #Top4;
+END
+GO
