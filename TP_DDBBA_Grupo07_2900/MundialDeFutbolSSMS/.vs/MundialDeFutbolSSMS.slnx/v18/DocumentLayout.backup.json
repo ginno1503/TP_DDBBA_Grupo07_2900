@@ -1,0 +1,444 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\00_CrearBaseDeDatosYEsquemas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\00_CrearBaseDeDatosYEsquemas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\01_CrearTablas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\01_CrearTablas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\02_Funciones.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\02_Funciones.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\03_SP_ABM_Base.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\03_SP_ABM_Base.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\03_Test_Base.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\03_Test_Base.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\04_SP_ABM_Personas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\04_SP_ABM_Personas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\04_Test_Personas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\04_Test_Personas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\05_SP_ABM_Partidos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\05_SP_ABM_Partidos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\05_Test_Partidos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\05_Test_Partidos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\06_SP_ABM_Eventos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\06_SP_ABM_Eventos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\07_SP_ABM_Arbitros.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\07_SP_ABM_Arbitros.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\08_SP_ABM_Publicidad.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\08_SP_ABM_Publicidad.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\09_SP_Negocio.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\09_SP_Negocio.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\18_Test_ImportacionApis.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\18_Test_ImportacionApis.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\12_CrearTablasExternas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\12_CrearTablasExternas.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\18_SP_ImportacionApis.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\18_SP_ImportacionApis.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\17_Test_Scraping (2).sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\17_Test_Scraping (2).sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\17_SP_Scraping.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\17_SP_Scraping.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\16_Test_ImportacionGoles (2).sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\16_Test_ImportacionGoles (2).sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\16_SP_ImportacionGoles.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\16_SP_ImportacionGoles.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\15_SP_ImportacionMundial.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\15_SP_ImportacionMundial.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\15_Test_ImportacionMundial (2).sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\15_Test_ImportacionMundial (2).sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\11_CrearTablasImportacion.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\11_CrearTablasImportacion.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\14_Test_Utilidades.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\14_Test_Utilidades.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\14_SP_Utilidades.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\14_SP_Utilidades.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\10_ConfigurarServidor.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\10_ConfigurarServidor.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\13_Test_ABM_Externos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\13_Test_ABM_Externos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\13_SP_ABM_Externos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{2CD12DF7-36AE-B85F-2512-3B52FA6CFBB9}|Entrega6\\Entrega6.ssmssqlproj|solutionrelative:Entrega6\\13_SP_ABM_Externos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "03_Test_Base.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (101))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\03_Test_Base.sql",
+              "RelativeDocumentMoniker": "Entrega5\\03_Test_Base.sql",
+              "ToolTip": "03_Test_Base.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (101))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:17:58.471Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (101))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "03_SP_ABM_Base.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (102))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\03_SP_ABM_Base.sql",
+              "RelativeDocumentMoniker": "Entrega5\\03_SP_ABM_Base.sql",
+              "ToolTip": "03_SP_ABM_Base.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (102))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:17:55.743Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (102))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "02_Funciones.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (103))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\02_Funciones.sql",
+              "RelativeDocumentMoniker": "Entrega5\\02_Funciones.sql",
+              "ToolTip": "02_Funciones.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (103))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:17:52.463Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (103))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "01_CrearTablas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (104))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\01_CrearTablas.sql",
+              "RelativeDocumentMoniker": "Entrega5\\01_CrearTablas.sql",
+              "ToolTip": "01_CrearTablas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (104))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:17:49.608Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (104))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "00_CrearBaseDeDatosYEsquemas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (105))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\00_CrearBaseDeDatosYEsquemas.sql",
+              "RelativeDocumentMoniker": "Entrega5\\00_CrearBaseDeDatosYEsquemas.sql",
+              "ToolTip": "00_CrearBaseDeDatosYEsquemas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (105))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:17:44.879Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (105))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "04_SP_ABM_Personas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (100))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\04_SP_ABM_Personas.sql",
+              "RelativeDocumentMoniker": "Entrega5\\04_SP_ABM_Personas.sql",
+              "ToolTip": "04_SP_ABM_Personas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (100))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:10.935Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (100))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "04_Test_Personas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (99))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\04_Test_Personas.sql",
+              "RelativeDocumentMoniker": "Entrega5\\04_Test_Personas.sql",
+              "ToolTip": "04_Test_Personas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (99))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:14.207Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (99))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "05_SP_ABM_Partidos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (98))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\05_SP_ABM_Partidos.sql",
+              "RelativeDocumentMoniker": "Entrega5\\05_SP_ABM_Partidos.sql",
+              "ToolTip": "05_SP_ABM_Partidos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (98))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:26.952Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (98))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "05_Test_Partidos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (97))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\05_Test_Partidos.sql",
+              "RelativeDocumentMoniker": "Entrega5\\05_Test_Partidos.sql",
+              "ToolTip": "05_Test_Partidos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (97))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:30.255Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (97))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "06_SP_ABM_Eventos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (96))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\06_SP_ABM_Eventos.sql",
+              "RelativeDocumentMoniker": "Entrega5\\06_SP_ABM_Eventos.sql",
+              "ToolTip": "06_SP_ABM_Eventos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (96))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:34.04Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (96))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "07_SP_ABM_Arbitros.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (95))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\07_SP_ABM_Arbitros.sql",
+              "RelativeDocumentMoniker": "Entrega5\\07_SP_ABM_Arbitros.sql",
+              "ToolTip": "07_SP_ABM_Arbitros.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (95))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:37.272Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (95))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "08_SP_ABM_Publicidad.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (94))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\08_SP_ABM_Publicidad.sql",
+              "RelativeDocumentMoniker": "Entrega5\\08_SP_ABM_Publicidad.sql",
+              "ToolTip": "08_SP_ABM_Publicidad.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (94))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:40.816Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (94))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "09_SP_Negocio.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (68))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\09_SP_Negocio.sql",
+              "RelativeDocumentMoniker": "Entrega5\\09_SP_Negocio.sql",
+              "ToolTip": "09_SP_Negocio.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (68))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:18:43.967Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (68))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "18_Test_ImportacionApis.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (53))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\18_Test_ImportacionApis.sql",
+              "RelativeDocumentMoniker": "Entrega6\\18_Test_ImportacionApis.sql",
+              "ToolTip": "18_Test_ImportacionApis.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (53))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:39:30.484Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (53))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "12_CrearTablasExternas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (84))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\12_CrearTablasExternas.sql",
+              "RelativeDocumentMoniker": "Entrega6\\12_CrearTablasExternas.sql",
+              "ToolTip": "12_CrearTablasExternas.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (84))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:21:05.695Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (84))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "18_SP_ImportacionApis.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (65))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\18_SP_ImportacionApis.sql",
+              "RelativeDocumentMoniker": "Entrega6\\18_SP_ImportacionApis.sql",
+              "ToolTip": "18_SP_ImportacionApis.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (65))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:39:25.342Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (65))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "17_Test_Scraping (2).sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (69))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\17_Test_Scraping (2).sql",
+              "RelativeDocumentMoniker": "Entrega6\\17_Test_Scraping (2).sql",
+              "ToolTip": "17_Test_Scraping (2).sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (69))*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T23:33:00.78Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (69))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "17_SP_Scraping.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (61))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\17_SP_Scraping.sql",
+              "RelativeDocumentMoniker": "Entrega6\\17_SP_Scraping.sql",
+              "ToolTip": "17_SP_Scraping.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (61))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:34:52.114Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (61))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "16_Test_ImportacionGoles (2).sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (79))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\16_Test_ImportacionGoles (2).sql",
+              "RelativeDocumentMoniker": "Entrega6\\16_Test_ImportacionGoles (2).sql",
+              "ToolTip": "16_Test_ImportacionGoles (2).sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (79))*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T23:03:14.503Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (79))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "16_SP_ImportacionGoles.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (73))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\16_SP_ImportacionGoles.sql",
+              "RelativeDocumentMoniker": "Entrega6\\16_SP_ImportacionGoles.sql",
+              "ToolTip": "16_SP_ImportacionGoles.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (73))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:30:44.834Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (73))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "15_SP_ImportacionMundial.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (67))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\15_SP_ImportacionMundial.sql",
+              "RelativeDocumentMoniker": "Entrega6\\15_SP_ImportacionMundial.sql",
+              "ToolTip": "15_SP_ImportacionMundial.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (67))*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:22:30.073Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (67))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "15_Test_ImportacionMundial (2).sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (77))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\15_Test_ImportacionMundial (2).sql",
+              "RelativeDocumentMoniker": "Entrega6\\15_Test_ImportacionMundial (2).sql",
+              "ToolTip": "15_Test_ImportacionMundial (2).sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (77))*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:59:07.897Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (77))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "11_CrearTablasImportacion.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (83))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\11_CrearTablasImportacion.sql",
+              "RelativeDocumentMoniker": "Entrega6\\11_CrearTablasImportacion.sql",
+              "ToolTip": "11_CrearTablasImportacion.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (83))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:20:42.733Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (83))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "14_Test_Utilidades.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (71))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\14_Test_Utilidades.sql",
+              "RelativeDocumentMoniker": "Entrega6\\14_Test_Utilidades.sql",
+              "ToolTip": "14_Test_Utilidades.sql - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (71))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:21:32.992Z",
+              "EditorCaption": " - localhost.MundialFutbol (DESKTOP-1RNSV4J\\usuario (71))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "14_SP_Utilidades.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (70))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\14_SP_Utilidades.sql",
+              "RelativeDocumentMoniker": "Entrega6\\14_SP_Utilidades.sql",
+              "ToolTip": "14_SP_Utilidades.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (70))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:21:28.985Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (70))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "10_ConfigurarServidor.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (85))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\10_ConfigurarServidor.sql",
+              "RelativeDocumentMoniker": "Entrega6\\10_ConfigurarServidor.sql",
+              "ToolTip": "10_ConfigurarServidor.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (85))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:11:06.365Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (85))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "13_Test_ABM_Externos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (91))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\13_Test_ABM_Externos.sql",
+              "RelativeDocumentMoniker": "Entrega6\\13_Test_ABM_Externos.sql",
+              "ToolTip": "13_Test_ABM_Externos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (91))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:21:23.08Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (91))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "13_SP_ABM_Externos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (86))",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\git\\TP_DDBBA\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega6\\13_SP_ABM_Externos.sql",
+              "RelativeDocumentMoniker": "Entrega6\\13_SP_ABM_Externos.sql",
+              "ToolTip": "13_SP_ABM_Externos.sql - localhost.master (DESKTOP-1RNSV4J\\usuario (86))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-03T22:21:17.464Z",
+              "EditorCaption": " - localhost.master (DESKTOP-1RNSV4J\\usuario (86))"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
