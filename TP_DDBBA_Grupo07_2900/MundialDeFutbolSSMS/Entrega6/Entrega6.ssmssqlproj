@@ -3,111 +3,111 @@
   <Items>
     <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="localhost:DESKTOP-1RNSV4J\usuario">
-          <Created>2026-11-03T19:11:06.6062654-03:00</Created>
+        <ConnectionNode Name="ANDRESLEEN\SQLEXPRESS:ANDRESLEEN\golde">
+          <Created>2026-11-06T15:51:15.0047081-03:00</Created>
           <Type>SQL</Type>
-          <Server>localhost</Server>
+          <Server>ANDRESLEEN\SQLEXPRESS</Server>
           <UserName />
           <Authentication>Autenticación de Windows</Authentication>
-          <InitialDB>master</InitialDB>
+          <InitialDB />
           <LoginTimeout>15</LoginTimeout>
           <TrustServerCertificate>True</TrustServerCertificate>
           <EncryptionOption>True</EncryptionOption>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+          <ApplicationName>SQL Server Management Studio</ApplicationName>
         </ConnectionNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Consultas" Type="0" Sorted="true">
       <Items>
         <FileNode Name="10_ConfigurarServidor.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>10_ConfigurarServidor.sql</FullPath>
         </FileNode>
         <FileNode Name="11_CrearTablasImportacion.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>11_CrearTablasImportacion.sql</FullPath>
         </FileNode>
         <FileNode Name="12_CrearTablasExternas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>12_CrearTablasExternas.sql</FullPath>
         </FileNode>
         <FileNode Name="13_SP_ABM_Externos.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>13_SP_ABM_Externos.sql</FullPath>
         </FileNode>
         <FileNode Name="13_Test_ABM_Externos.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>13_Test_ABM_Externos.sql</FullPath>
         </FileNode>
         <FileNode Name="14_SP_Utilidades.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>14_SP_Utilidades.sql</FullPath>
         </FileNode>
         <FileNode Name="14_Test_Utilidades.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>14_Test_Utilidades.sql</FullPath>
         </FileNode>
         <FileNode Name="15_SP_ImportacionMundial.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>15_SP_ImportacionMundial.sql</FullPath>
         </FileNode>
         <FileNode Name="15_Test_ImportacionMundial (2).sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>15_Test_ImportacionMundial (2).sql</FullPath>
         </FileNode>
         <FileNode Name="16_SP_ImportacionGoles.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>16_SP_ImportacionGoles.sql</FullPath>
         </FileNode>
         <FileNode Name="16_Test_ImportacionGoles (2).sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>16_Test_ImportacionGoles (2).sql</FullPath>
         </FileNode>
         <FileNode Name="17_SP_Scraping.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>17_SP_Scraping.sql</FullPath>
         </FileNode>
         <FileNode Name="17_Test_Scraping (2).sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>17_Test_Scraping (2).sql</FullPath>
         </FileNode>
         <FileNode Name="18_SP_ImportacionApis.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>18_SP_ImportacionApis.sql</FullPath>
         </FileNode>
         <FileNode Name="18_Test_ImportacionApis.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>18_Test_ImportacionApis.sql</FullPath>
         </FileNode>

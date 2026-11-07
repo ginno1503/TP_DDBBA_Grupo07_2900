@@ -32,6 +32,7 @@ DROP TABLE IF EXISTS publicidad.TipoCambio;
 DROP TABLE IF EXISTS importacion.EquivalenciaPais;
 GO
 
+
 CREATE TABLE importacion.EquivalenciaPais (
     id_equivalencia INT IDENTITY(1,1) NOT NULL,
     codigo_iso2 CHAR(2) NULL,

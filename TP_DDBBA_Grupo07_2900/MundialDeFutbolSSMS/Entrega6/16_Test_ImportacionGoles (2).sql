@@ -69,7 +69,7 @@ DELETE FROM geo.Idioma;
 GO
 
 DECLARE @ruta VARCHAR(260);
-DECLARE @repo VARCHAR(200) = 'C:\Users\usuario\Documents\git\TP_DDBBA\TP_DDBBA_Grupo07_2900';   -- << AJUSTAR: único dato a cambiar, la carpeta donde está el repo (con o sin barra final)
+DECLARE @repo VARCHAR(200) = 'C:\Users\golde\Documents\Universidad\BDA_TP\TP_DDBBA_Grupo07_2900\TP_DDBBA_Grupo07_2900';   -- << AJUSTAR: único dato a cambiar, la carpeta donde está el repo (con o sin barra final)
 DECLARE @carpeta VARCHAR(260) = CASE WHEN RIGHT(@repo, 1) = '\' THEN @repo ELSE @repo + '\' END + 'importacion\';   -- worldcup.json y goals.csv
 DECLARE @id_imp INT, @id_final INT, @id_formacion INT, @id_arg INT, @id_messi INT;
 
