@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\19_SeedDeDatos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
       "RelativeMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|solutionrelative:Entrega7\\19_SeedDeDatos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\20_Reportes.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|solutionrelative:Entrega7\\20_Reportes.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\09_SP_Negocio.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{86333A15-085C-F0FF-9F0F-BD7859934D6E}|Entrega5\\Entrega5.ssmssqlproj|solutionrelative:Entrega5\\09_SP_Negocio.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,22 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20_Reportes.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (95))",
+              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\20_Reportes.sql",
+              "RelativeDocumentMoniker": "Entrega7\\20_Reportes.sql",
+              "ToolTip": "20_Reportes.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (95))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-10T15:51:38.757Z",
+              "IsPinned": true,
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (95))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "09_SP_Negocio.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (68))",
+              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega5\\09_SP_Negocio.sql",
+              "RelativeDocumentMoniker": "Entrega5\\09_SP_Negocio.sql",
+              "ToolTip": "09_SP_Negocio.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (68))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-10T19:42:38.567Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (68))"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "19_SeedDeDatos.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (92))",
+              "Title": "19_SeedDeDatos.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (54))",
               "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\19_SeedDeDatos.sql",
               "RelativeDocumentMoniker": "Entrega7\\19_SeedDeDatos.sql",
-              "ToolTip": "19_SeedDeDatos.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (92))",
+              "ToolTip": "19_SeedDeDatos.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (54))",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-11-07T18:58:35.701Z",
-              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (92))"
+              "WhenOpened": "2026-11-10T19:36:04.041Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (54))"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

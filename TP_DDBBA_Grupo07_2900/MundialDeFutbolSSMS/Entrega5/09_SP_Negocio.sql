@@ -528,13 +528,17 @@ BEGIN
     DECLARE @pais1 INT,
             @pais2 INT,
             @utc DATETIME2(0),
-            @id_tarifa int;
-    
+            @id_tarifa int,
+
+            @sede INT;
     
     SELECT
         @utc = p.fecha_hora_utc,
         @pais1 = s1.id_pais,
-        @pais2 = s2.id_pais
+        @pais2 = s2.id_pais,
+
+        @sede = p.id_sede
+
     FROM torneo.Partido p
     JOIN torneo.Seleccion s1  ON s1.id_seleccion = p.id_seleccion_1
     JOIN torneo.Seleccion s2  ON s2.id_seleccion = p.id_seleccion_2
@@ -603,11 +607,21 @@ BEGIN
     IF (SELECT COUNT(*) FROM #Top4) < 4
         THROW 50001, 'No existen cuatro contenidos candidatos.', 1;
 
-    -- Tarifa --
     SELECT TOP 1
         @id_tarifa = id_tarifa
-    FROM publicidad.Tarifa
-    ORDER BY costo DESC;
+    FROM torneo.Sede s
+    JOIN geo.Ciudad c ON s.id_ciudad = c.id_ciudad
+    JOIN geo.Pais p ON c.id_pais = p.id_pais
+    CROSS APPLY (
+        SELECT 
+            CASE 
+                WHEN DATEPART(HOUR, DATEADD(MINUTE, CAST(p.huso_horario * 60 AS INT), @utc)) BETWEEN 19 AND 23 THEN 'Prime Time Mundial'
+                WHEN DATEPART(HOUR, DATEADD(MINUTE, CAST(p.huso_horario * 60 AS INT), @utc)) BETWEEN 13 AND 18 THEN 'Tarde'
+                WHEN DATEPART(HOUR, DATEADD(MINUTE, CAST(p.huso_horario * 60 AS INT), @utc)) BETWEEN 11 AND 12 THEN 'Mediodia'
+                WHEN DATEPART(HOUR, DATEADD(MINUTE, CAST(p.huso_horario * 60 AS INT), @utc)) BETWEEN 0 AND 10 THEN  'Mañana'
+            END AS nombre_franja
+                ) franja
+    JOIN publicidad.Tarifa t ON t.franja = franja.nombre_franja
 
     IF @id_tarifa IS NULL
     THROW 50001, 'No existe ninguna tarifa cargada.', 1;

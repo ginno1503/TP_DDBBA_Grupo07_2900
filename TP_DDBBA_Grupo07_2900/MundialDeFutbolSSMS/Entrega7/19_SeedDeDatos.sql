@@ -13,11 +13,15 @@
                     6. Asignacion arbitral y conflicto de nacionalidad
                         6.1 Caso de Asignacion por conflicto de nacionalidad 
                     7. Generación Aleatoria de Tarjetas y Expulsiones
-                    8. Publicidad y Prime Time 
+                    8. Generación Publicitaria y Asignación
+                        8.1 Generación
+                        8.2 Asignación
                     9. Caso Obligatorio: Cambio por Lesión (< 20 mins)
                     10.Caso Obligatorio: Suspensión por Acumulación y Doble Amarilla
                         10.1. Forzar Acumulación (Mismo jugador, 2 partidos distintos)
                         10.2. Forzar Doble Amarilla (Mismo jugador, mismo partido)
+                    11. Importacion Info Clubes
+                    12. Importacion Husos Horarios
                  
   ============================================================================= */
 
@@ -37,6 +41,7 @@ PRINT '1. Importación General Mundial 2022.'
 SET @ruta = @carpeta + 'worldcup.json';
 DECLARE @id_torneo VARCHAR(10) = 'WC-2022';
 EXEC importacion.Mundial_Importar @ruta = @ruta, @id_torneo = @id_torneo;
+
 -- Importa Sedes, Selecciones, Jugadores, Partidos y Alineaciones
 -- Verificación
 -- SELECT * FROM torneo.Sede
@@ -55,6 +60,7 @@ PRINT '2. Importación Goles Mundial 2022.'
 
 SET @ruta = @carpeta + 'goals.csv';
 EXEC importacion.Goles_Importar @ruta = @ruta, @id_torneo = @id_torneo;
+
 -- Importa los goles del torneo
 -- Verificación
 -- SELECT * FROM torneo.Gol
@@ -69,6 +75,7 @@ PRINT '2. Importación Másiva Arbitros Oficiales.'
 
 -- ARBITROS
 EXEC importacion.Arbitro_ImportarWeb;
+
 -- SELECT * FROM personas.Arbitro
 
 PRINT 'Ok - Importación Arbitros.'
@@ -80,6 +87,7 @@ PRINT '3. Importación PBI Paises.'
 
 -- PBI paises
 EXEC importacion.Pbi_ImportarWeb;
+
 -- SELECT * FROM geo.Pais
 
 PRINT 'Ok - Importación PBI Paises.'
@@ -91,6 +99,7 @@ PRINT '4. Importación Moneda, Tipo de Cambio.'
 
 -- Cotizaciones Moneda 
 EXEC importacion.TipoCambio_ImportarFrankfurter;
+
 -- SELECT * FROM publicidad.TipoCambio
 
 PRINT 'Ok - Importación Moneda, Tipo de Cambio.'
@@ -102,6 +111,7 @@ PRINT '5. Importación Feriados'
 
 -- Feriados 
 EXEC importacion.Feriado_ImportarNager @anio = 2022;
+
 -- SELECT * FROM publicidad.Feriado
 
 PRINT 'Ok - Importación Feriados'
@@ -342,37 +352,66 @@ PRINT 'Ok - Generación Aleatoria de Tarjetas y Expulsiones'
 -- SELECT * FROM torneo.Sancion
 
 -- ==========================================================================================
--- 8. Publicidad y Prime Time 
+-- 8. Generacion Publicitaria y Asignación 
 -- ==========================================================================================
 
-PRINT '8. Publicidad y Prime Time.';
+PRINT '8.1. Generacion Publicitaria ';
 GO
 
-CREATE OR ALTER PROCEDURE publicidad.generarPublicidadObligatoria
+CREATE OR ALTER PROCEDURE publicidad.generarPublicidad
 AS
 BEGIN
+
    SET NOCOUNT ON;
 
     -- Variables para ids
-    DECLARE @id_idioma_es INT, @id_tarifa INT;
-    DECLARE @id_a1 INT, @id_a2 INT, @id_a3 INT, @id_a4 INT, @id_a5 INT, @id_a6 INT;
-    DECLARE @id_p1 INT, @id_p2 INT, @id_p3 INT, @id_p4 INT, @id_p5 INT, @id_p6 INT;
-    DECLARE @partido_final INT;
+    DECLARE @id_idioma_es INT, @id_idioma_ing INT, @id_idioma_ar INT;
+    DECLARE @id_tarifa INT;
+    DECLARE @id_a1 INT, @id_a2 INT, @id_a3 INT, @id_a4 INT, @id_a5 INT, @id_a6 INT, @id_a7 INT;
+    DECLARE @id_p1 INT, @id_p2 INT, @id_p3 INT, @id_p4 INT, @id_p5 INT, @id_p6 INT, @id_p7 INT;
 
     BEGIN TRY 
         BEGIN TRANSACTION; 
 
-        -- Idioma
+        -- Idiomas 
         IF NOT EXISTS (SELECT 1 FROM geo.Idioma WHERE nombre = 'Español')
             EXEC geo.Idioma_Insertar 'Español', @id_idioma_es OUTPUT;
         ELSE 
             SELECT @id_idioma_es = id_idioma FROM geo.Idioma WHERE nombre = 'Español';
 
-        -- Tarifa
+       IF NOT EXISTS (SELECT 1 FROM geo.Idioma WHERE nombre = 'Ingles')
+            EXEC geo.Idioma_Insertar 'Ingles', @id_idioma_ing OUTPUT;
+        ELSE 
+            SELECT @id_idioma_ing = id_idioma FROM geo.Idioma WHERE nombre = 'Ingles';
+
+       IF NOT EXISTS (SELECT 1 FROM geo.Idioma WHERE nombre = 'Arabe')
+            EXEC geo.Idioma_Insertar 'Arabe', @id_idioma_ar OUTPUT;
+        ELSE 
+            SELECT @id_idioma_ar = id_idioma FROM geo.Idioma WHERE nombre = 'Arabe';
+
+
+            SELECT * FROM publicidad.tarifa
+        -- Tarifa 150.000 USD por espacio
         IF NOT EXISTS (SELECT 1 FROM publicidad.Tarifa WHERE franja = 'Prime Time Mundial')
             EXEC publicidad.Tarifa_Insertar 'Prime Time Mundial', 250000.00, @id_tarifa OUTPUT;
         ELSE 
             SELECT @id_tarifa = id_tarifa FROM publicidad.Tarifa WHERE franja = 'Prime Time Mundial';
+
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Tarifa WHERE franja = 'Tarde')
+            EXEC publicidad.Tarifa_Insertar 'Tarde', 150000.00, @id_tarifa OUTPUT;
+        ELSE 
+            SELECT @id_tarifa = id_tarifa FROM publicidad.Tarifa WHERE franja = 'Tarde';
+
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Tarifa WHERE franja = 'Mediodia')
+            EXEC publicidad.Tarifa_Insertar 'Mediodia', 75000.00, @id_tarifa OUTPUT;
+        ELSE 
+            SELECT @id_tarifa = id_tarifa FROM publicidad.Tarifa WHERE franja = 'Mediodia';
+
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Tarifa WHERE franja = 'Mañana')
+            EXEC publicidad.Tarifa_Insertar 'Mañana', 50000.00, @id_tarifa OUTPUT;
+        ELSE 
+            SELECT @id_tarifa = id_tarifa FROM publicidad.Tarifa WHERE franja = 'Mañana';
+
 
         -- Anunciantes (Se busca si existe, sino se inserta)
         IF NOT EXISTS (SELECT 1 FROM publicidad.Anunciante WHERE razon_social = 'Adidas AG')
@@ -395,9 +434,13 @@ BEGIN
             EXEC publicidad.Anunciante_Insertar 'Qatar Airways', 'Qatar Airways Group', @id_a5 OUTPUT;
         ELSE SELECT @id_a5 = id_anunciante FROM publicidad.Anunciante WHERE razon_social = 'Qatar Airways Group';
 
-        IF NOT EXISTS (SELECT 1 FROM publicidad.Anunciante WHERE razon_social = 'Wanda Group')
-            EXEC publicidad.Anunciante_Insertar 'Wanda', 'Wanda Group', @id_a6 OUTPUT;
-        ELSE SELECT @id_a6 = id_anunciante FROM publicidad.Anunciante WHERE razon_social = 'Wanda Group';
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Anunciante WHERE razon_social = 'Laboratorios Andrómaco')
+            EXEC publicidad.Anunciante_Insertar 'Dermaglós', 'Laboratorios Andrómaco', @id_a6 OUTPUT;
+        ELSE SELECT @id_a6 = id_anunciante FROM publicidad.Anunciante WHERE razon_social = 'Laboratorios Andrómaco';
+
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Anunciante WHERE razon_social = 'Cervecerías Unidas Argentina')
+            EXEC publicidad.Anunciante_Insertar 'Schneider', 'Cervecerías Unidas Argentina', @id_a7 OUTPUT;
+        ELSE SELECT @id_a7 = id_anunciante FROM publicidad.Anunciante WHERE razon_social = 'Cervecerías Unidas Argentina';
 
         -- Campañas
         IF NOT EXISTS (SELECT 1 FROM publicidad.Campania WHERE cod_campania = 'CAMP-ADI') 
@@ -410,121 +453,174 @@ BEGIN
             EXEC publicidad.Campania_Insertar @id_a4, 'CAMP-VIS', 'Everywhere You Want to Be';
         IF NOT EXISTS (SELECT 1 FROM publicidad.Campania WHERE cod_campania = 'CAMP-QAT') 
             EXEC publicidad.Campania_Insertar @id_a5, 'CAMP-QAT', 'Going Places Together';
-        IF NOT EXISTS (SELECT 1 FROM publicidad.Campania WHERE cod_campania = 'CAMP-WAN') 
-            EXEC publicidad.Campania_Insertar @id_a6, 'CAMP-WAN', 'Wanda Sports';
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Campania WHERE cod_campania = 'CAMP-DER') 
+            EXEC publicidad.Campania_Insertar @id_a6, 'CAMP-DER', 'En la cancha, cada detalle cuenta';
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Campania WHERE cod_campania = 'CAMP-SCH') 
+            EXEC publicidad.Campania_Insertar @id_a7, 'CAMP-SCH', 'La plaga';
 
         -- Contenidos
         IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-ADI') 
-            EXEC publicidad.Contenido_Insertar @id_a1, 'CAMP-ADI', 'SPOT-ADI', 'Spot Zapatos', @id_idioma_es;
+            EXEC publicidad.Contenido_Insertar @id_a1, 'CAMP-ADI', 'SPOT-ADI', 'Spot Zapatos', @id_idioma_ing;
         IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-KO')  
             EXEC publicidad.Contenido_Insertar @id_a2, 'CAMP-KO', 'SPOT-KO', 'Spot Bebida', @id_idioma_es;
         IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-HYU') 
-            EXEC publicidad.Contenido_Insertar @id_a3, 'CAMP-HYU', 'SPOT-HYU', 'Spot Auto', @id_idioma_es;
+            EXEC publicidad.Contenido_Insertar @id_a3, 'CAMP-HYU', 'SPOT-HYU', 'Spot Auto', @id_idioma_ing;
         IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-VIS') 
             EXEC publicidad.Contenido_Insertar @id_a4, 'CAMP-VIS', 'SPOT-VIS', 'Spot Tarjeta', @id_idioma_es;
         IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-QAT') 
-            EXEC publicidad.Contenido_Insertar @id_a5, 'CAMP-QAT', 'SPOT-QAT', 'Spot Vuelo', @id_idioma_es;
-        IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-WAN') 
-            EXEC publicidad.Contenido_Insertar @id_a6, 'CAMP-WAN', 'SPOT-WAN', 'Spot Inmobiliaria', @id_idioma_es;
+            EXEC publicidad.Contenido_Insertar @id_a5, 'CAMP-QAT', 'SPOT-QAT', 'Spot Vuelo', @id_idioma_ar;
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-DER') 
+            EXEC publicidad.Contenido_Insertar @id_a6, 'CAMP-DER', 'SPOT-DER', 'Spot Protector', @id_idioma_es;
+        IF NOT EXISTS (SELECT 1 FROM publicidad.Contenido WHERE cod_contenido = 'SPOT-SCH') 
+            EXEC publicidad.Contenido_Insertar @id_a7, 'CAMP-SCH', 'SPOT-SCH', 'Spot Cerveza', @id_idioma_es;
 
-        -- Configuración de Paises Objetivos (Husos horarios estratégicos para que la final a las 15:00 UTC caiga entre 19:00 y 23:00 local)
+
+        -- Vincular contenido a pais
+
+        -- Buscamos (o insertamos si no existen) 6 países estratégicos para forzar el Prime Time
         IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Emiratos Arabes') 
             EXEC geo.Pais_Insertar 'Emiratos Arabes', 4.0, 45000, @id_p1 OUTPUT;
-        ELSE 
-            SELECT @id_p1 = id_pais FROM geo.Pais WHERE nombre = 'Emiratos Arabes';
+        ELSE SELECT @id_p1 = id_pais FROM geo.Pais WHERE nombre = 'Emiratos Arabes';
 
         IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Pakistan') 
             EXEC geo.Pais_Insertar 'Pakistan', 5.0, 1500, @id_p2 OUTPUT;
-        ELSE 
-            SELECT @id_p2 = id_pais FROM geo.Pais WHERE nombre = 'Pakistan';
-
-        IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Bangladesh') 
-            EXEC geo.Pais_Insertar 'Bangladesh', 6.0, 2500, @id_p3 OUTPUT;
-        ELSE 
-            SELECT @id_p3 = id_pais FROM geo.Pais WHERE nombre = 'Bangladesh';
-
-        IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Tailandia') 
-            EXEC geo.Pais_Insertar 'Tailandia', 7.0, 7500, @id_p4 OUTPUT;
-        ELSE 
-            SELECT @id_p4 = id_pais FROM geo.Pais WHERE nombre = 'Tailandia';
-
-        IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'China') 
-            EXEC geo.Pais_Insertar 'China', 8.0, 12500, @id_p5 OUTPUT;
-        ELSE 
-            SELECT @id_p5 = id_pais FROM geo.Pais WHERE nombre = 'China';
+        ELSE SELECT @id_p2 = id_pais FROM geo.Pais WHERE nombre = 'Pakistan';
 
         IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'India') 
-            EXEC geo.Pais_Insertar 'India', 5.5, 2300, @id_p6 OUTPUT;
-        ELSE 
-            SELECT @id_p6 = id_pais FROM geo.Pais WHERE nombre = 'India';
+            EXEC geo.Pais_Insertar 'India', 5.5, 11748.00, @id_p3 OUTPUT;
+        ELSE SELECT @id_p3 = id_pais FROM geo.Pais WHERE nombre = 'India';
 
-        -- Vincular contenido a pais
+        IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Bangladesh') 
+            EXEC geo.Pais_Insertar 'Bangladesh', 6.0, 9646.00, @id_p4 OUTPUT;
+        ELSE SELECT @id_p4 = id_pais FROM geo.Pais WHERE nombre = 'Bangladesh';
+
+        IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Tailandia') 
+            EXEC geo.Pais_Insertar 'Tailandia', 7.0, 26250.00, @id_p5 OUTPUT;
+        ELSE SELECT @id_p5 = id_pais FROM geo.Pais WHERE nombre = 'Tailandia';
+
+        IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'China') 
+            EXEC geo.Pais_Insertar 'China', 8.0, 13500, @id_p6 OUTPUT;
+        ELSE SELECT @id_p6 = id_pais FROM geo.Pais WHERE nombre = 'China';
+
+         IF NOT EXISTS (SELECT 1 FROM geo.Pais WHERE nombre = 'Argentina') 
+            EXEC geo.Pais_Insertar 'Argentina ', -3, 32587.00, @id_p7 OUTPUT;
+        ELSE SELECT @id_p7 = id_pais FROM geo.Pais WHERE nombre = 'Argentina';
+
+        -- Vincular contenido a país (Cargamos la tabla publicidad.ContenidoPais)
         IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-ADI' AND id_pais = @id_p1) 
             EXEC publicidad.ContenidoPais_Insertar @id_a1, 'CAMP-ADI', 'SPOT-ADI', @id_p1;
+            
         IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-KO' AND id_pais = @id_p2)  
             EXEC publicidad.ContenidoPais_Insertar @id_a2, 'CAMP-KO', 'SPOT-KO', @id_p2;
+            
         IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-HYU' AND id_pais = @id_p3) 
             EXEC publicidad.ContenidoPais_Insertar @id_a3, 'CAMP-HYU', 'SPOT-HYU', @id_p3;
+            
         IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-VIS' AND id_pais = @id_p4) 
             EXEC publicidad.ContenidoPais_Insertar @id_a4, 'CAMP-VIS', 'SPOT-VIS', @id_p4;
+            
         IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-QAT' AND id_pais = @id_p5) 
             EXEC publicidad.ContenidoPais_Insertar @id_a5, 'CAMP-QAT', 'SPOT-QAT', @id_p5;
-        IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-WAN' AND id_pais = @id_p6) 
-            EXEC publicidad.ContenidoPais_Insertar @id_a6, 'CAMP-WAN', 'SPOT-WAN', @id_p6;
+
+        IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-QAT' AND id_pais = @id_p6) 
+            EXEC publicidad.ContenidoPais_Insertar @id_a5, 'CAMP-QAT', 'SPOT-QAT', @id_p6;
+            
+        IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-DER' AND id_pais = @id_p7) 
+            EXEC publicidad.ContenidoPais_Insertar @id_a6, 'CAMP-DER', 'SPOT-DER', @id_p6;
+
+        IF NOT EXISTS (SELECT 1 FROM publicidad.ContenidoPais WHERE cod_contenido = 'SPOT-SCH' AND id_pais = @id_p7) 
+            EXEC publicidad.ContenidoPais_Insertar @id_a7, 'CAMP-SCH', 'SPOT-SCH', @id_p7;
+        
 
         COMMIT TRANSACTION; 
+        PRINT 'Ok - Contenido Pais Generado.'
+    
     END TRY 
+
     BEGIN CATCH
+
         IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION; 
+        PRINT 'Error en la generacion contenido pais: ' + ERROR_MESSAGE(); 
         THROW; 
+    
     END CATCH;
 
-
-        -- Asignación Automática
-
-        SELECT TOP 1 @partido_final = id_partido 
-        FROM torneo.Partido 
-        WHERE fase = 'FINAL';
-
-        IF @partido_final IS NOT NULL 
-        BEGIN
-            
-            BEGIN TRY 
-                EXEC publicidad.AsignarAutomaticamenteAPartido @partido_final; 
-                PRINT 'Ok. Caso: Choque de prime Time resuelto. 4 postulantes assignados de 6 en total.';
-            END TRY
-
-            BEGIN CATCH 
-                IF ERROR_MESSAGE() LIKE '%ya tiene publicidad%'
-                    PRINT 'El partido FINAL ya tiene publicidad asignada. Se omitió la asignación.'
-                ELSE 
-                    THROW; 
-            END CATCH
-        END
-        
-        ELSE
-        BEGIN
-            PRINT 'Error. No se encontró el partido "FINAL" para el cual asignar publicidad.';
-        END
  END
+GO
+
+
+ EXEC publicidad.generarPublicidad
  GO
 
-IF 
-    ( 
-        SELECT COUNT(nro) FROM publicidad.EspacioPublicitario 
-        GROUP BY id_partido
-    ) <> 4
- EXEC publicidad.generarPublicidadObligatoria
- 
+ -- Verificacion: 
+ -- SELECT * FROM publicidad.Anunciante
+ -- SELECT * FROM publicidad.Campania 
+ -- SELECT * FROM publicidad.Contenido
+ -- SELECT * FROM publicidad.ContenidoPais
 
  PRINT 'Ok - Publicidad y Prime Time'
  GO
 
--- Verificación: 
 
--- SELECT * FROM publicidad.Anunciante
--- SELECT * FROM publicidad.Campania
--- SELECT * FROM publicidad.Contenido
+ -- =========================================================================================
+ --8.2 Asignacion masiva a todos los partiods
+ -- =========================================================================================
+
+PRINT '8.2 Asignacion masiva a todos los partiods';
+GO
+
+CREATE OR ALTER PROCEDURE publicidad.AsignarPublicidadMasiva
+AS
+BEGIN
+    
+    SET NOCOUNT ON;
+
+    DECLARE @id_partido INT;
+    DECLARE @cantidad_asignados INT = 0;
+
+    -- Tabla temporal para almacenar solo los partidos que no tienen publicidad
+    CREATE TABLE #PartidosSinPublicidad (
+        id_partido INT PRIMARY KEY
+    );
+
+    INSERT INTO #PartidosSinPublicidad (id_partido)
+    SELECT p.id_partido
+    FROM torneo.Partido p
+    WHERE NOT EXISTS (
+        SELECT 1 FROM publicidad.EspacioPublicitario ep 
+        WHERE ep.id_partido = p.id_partido
+    );
+
+    SELECT @id_partido = MIN(id_partido) FROM #PartidosSinPublicidad;
+
+    -- Asignamos partido por partido
+    WHILE @id_partido IS NOT NULL
+    BEGIN
+        BEGIN TRY
+
+            -- SP que hace todo el trabajo
+            EXEC publicidad.AsignarAutomaticamenteAPartido @id_partido;
+
+        END TRY
+
+        BEGIN CATCH
+
+            PRINT 'Error asignando publicidad al partido ' + CAST(@id_partido AS VARCHAR) + ': ' + ERROR_MESSAGE();
+        
+        END CATCH;
+
+        SELECT @id_partido = MIN(id_partido) FROM #PartidosSinPublicidad WHERE id_partido > @id_partido;
+    END
+
+    DROP TABLE #PartidosSinPublicidad;
+    PRINT 'OK - Asignación finalizada.';
+END;
+GO
+
+
+EXEC publicidad.AsignarPublicidadMasiva
+
+-- Verificación: 
 -- SELECT * FROM publicidad.EspacioPublicitario
 
 
@@ -605,3 +701,181 @@ BEGIN TRY
 END TRY
 BEGIN CATCH END CATCH;
 GO
+
+
+-- ===========================================================
+-- Importacion Info clubes
+-- ===========================================================
+
+
+PRINT '11. Importacion Info Clubes'
+GO
+
+CREATE OR ALTER PROCEDURE importacion.Clubes_Importar
+    @ruta VARCHAR(260)
+AS 
+BEGIN
+
+    SET NOCOUNT ON; 
+
+    BEGIN TRY 
+        
+        -- Tabla temporal para recibir los datos del CSV
+        CREATE TABLE #TempClubesJugadores
+        (
+            nombre_jugador NVARCHAR(100) COLLATE DATABASE_DEFAULT,
+            nombre_club NVARCHAR (100) COLLATE DATABASE_DEFAULT
+        );
+
+        DECLARE @sql NVARCHAR(MAX);
+        SET @sql = '
+        BULK INSERT #TempClubesJugadores
+        FROM ''' + @ruta + ''' 
+        WITH (
+            FORMAT = ''CSV'',
+            FIRSTROW = 2, 
+            FIELDTERMINATOR = '','',
+            ROWTERMINATOR = ''\n'',
+            CODEPAGE = ''65001'' -- Soporte para UTF-8 (tildes, ñ) 
+        );'; 
+
+        EXEC sp_executesql @sql; 
+
+        BEGIN TRANSACTION; 
+
+        -- Inserta los clubes de los jugadores de el mundial en la tabla clubes
+        INSERT INTO personas.Club (nombre)
+        SELECT DISTINCT LTRIM(RTRIM(t.nombre_club)) -- Evita duplicados en temp
+        FROM #TempClubesJugadores t
+        WHERE t.nombre_club IS NOT NULL -- Descarta jugadores sin club
+            AND t.nombre_club <> ''     -- Descarta clubes con cadena vacia
+            AND NOT EXISTS (
+                SELECT 1 
+                FROM personas.Club c
+                WHERE c.nombre = LTRIM(RTRIM(t.nombre_club)) -- Evita duplicados en tabla
+        );
+
+        -- Actualiza la tabla jugadores asignandoles su respectivo club
+        UPDATE j
+        SET j.id_club = c.id_club
+        FROM personas.Jugador j
+        JOIN personas.Participante p ON p.id_participante = j.id_participante
+        JOIN #TempClubesJugadores t ON p.nombre = t.nombre_jugador -- Deben tener exactamente el mismo nombre
+        JOIN personas.Club c ON c.nombre = LTRIM(RTRIM(t.nombre_club)) -- Une a cada jugador con su club
+
+        COMMIT TRANSACTION; 
+
+        PRINT 'Ok - Importacion de Clubes y actualizacion de jugadores.'
+        DROP TABLE #TempClubesJugadores; 
+
+    END TRY 
+    
+    BEGIN CATCH 
+        
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        PRINT 'Error en Importacion' + ERROR_MESSAGE(); 
+        THROW; 
+
+    END CATCH;
+
+END;
+GO
+
+DECLARE @ruta VARCHAR(260);
+DECLARE @repo VARCHAR(200) = 'C:\Users\golde\Documents\Universidad\BDA_TP\TP_DDBBA_Grupo07_2900\TP_DDBBA_Grupo07_2900';   -- << AJUSTAR: único dato a cambiar, la carpeta donde está el repo (con o sin barra final)
+DECLARE @carpeta VARCHAR(260) = CASE WHEN RIGHT(@repo, 1) = '\' THEN @repo ELSE @repo + '\' END + 'importacion\';   -- worldcup.json y goals.csv
+ 
+SET @ruta = @carpeta + 'clubes_jugadores.csv'
+EXEC importacion.Clubes_Importar @ruta = @ruta;
+GO
+
+
+/*
+--Verificacion: 
+
+SELECT p.nombre, c.nombre
+FROM personas.Participante p 
+JOIN personas.Jugador j ON p.id_participante = j.id_participante
+JOIN personas.Club c ON j.id_club = c.id_club
+*/
+
+
+-- ===========================================================
+-- 12. Importacion Husos Horarios
+-- ===========================================================
+
+PRINT '12. Importacion Husos Horarios'
+GO
+
+CREATE OR ALTER PROCEDURE importacion.HusoHorario_Importar
+    @ruta VARCHAR(260)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    BEGIN TRY
+        CREATE TABLE #TempHusos (
+            nombre_pais NVARCHAR(80),
+            huso_horario DECIMAL(4,2)
+        );
+
+        -- Ruta dinámica
+        DECLARE @sql NVARCHAR(MAX);
+        SET @sql = '
+        BULK INSERT #TempHusos
+        FROM ''' + @ruta + '''
+        WITH (
+            FORMAT = ''CSV'',
+            FIRSTROW = 2, 
+            FIELDTERMINATOR = '','',
+            ROWTERMINATOR = ''\n'',
+            CODEPAGE = ''65001''
+        );';
+
+        EXEC sp_executesql @sql;
+
+        BEGIN TRANSACTION;
+
+        -- Actualizar Paises
+        UPDATE p
+        SET p.huso_horario = t.huso_horario
+        FROM geo.Pais p
+        JOIN #TempHusos t 
+            ON p.nombre COLLATE SQL_Latin1_General_CP1_CI_AI
+            = t.nombre_pais COLLATE SQL_Latin1_General_CP1_CI_AI
+        WHERE p.huso_horario IS NULL OR p.huso_horario <> t.huso_horario;
+
+        -- Insertar paises nuevos 
+        INSERT INTO geo.Pais (nombre, huso_horario)
+        SELECT DISTINCT t.nombre_pais, t.huso_horario
+        FROM #TempHusos t
+        WHERE t.nombre_pais IS NOT NULL 
+          AND t.nombre_pais <> ''
+          AND NOT EXISTS (SELECT 1 
+                            FROM geo.Pais p 
+                            WHERE p.nombre  COLLATE SQL_Latin1_General_CP1_CI_AI = 
+                                  t.nombre_pais COLLATE SQL_Latin1_General_CP1_CI_AI);
+
+        COMMIT TRANSACTION;
+
+        PRINT 'Ok - Husos horarios actualizados e importados con éxito.';
+        DROP TABLE #TempHusos;
+
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION;
+        PRINT 'Error en importación de Husos Horarios: ' + ERROR_MESSAGE();
+        THROW; 
+    END CATCH;
+END;
+GO
+
+DECLARE @ruta VARCHAR(260);
+DECLARE @repo VARCHAR(200) = 'C:\Users\golde\Documents\Universidad\BDA_TP\TP_DDBBA_Grupo07_2900\TP_DDBBA_Grupo07_2900';   -- << AJUSTAR: único dato a cambiar, la carpeta donde está el repo (con o sin barra final)
+DECLARE @carpeta VARCHAR(260) = CASE WHEN RIGHT(@repo, 1) = '\' THEN @repo ELSE @repo + '\' END + 'importacion\';   -- worldcup.json y goals.csv
+ 
+
+SET @ruta = @carpeta + 'huso_horario.csv'
+EXEC importacion.HusoHorario_Importar @ruta = @ruta;
+GO
+

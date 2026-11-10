@@ -27,6 +27,12 @@
           <AssociatedConnUserName />
           <FullPath>19_SeedDeDatos.sql</FullPath>
         </FileNode>
+        <FileNode Name="20_Reportes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>20_Reportes.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Varios" Type="3" Sorted="true">
