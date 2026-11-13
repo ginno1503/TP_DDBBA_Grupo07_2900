@@ -277,7 +277,6 @@ BEGIN
     JOIN publicidad.Tarifa t ON ep.id_tarifa = t.id_tarifa
     FOR XML AUTO, ROOT('PublicidadPorSedeYPartido'), ELEMENTS;
 
-    -- Falta cambiar la tarifa
 
 END;
 GO
