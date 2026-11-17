@@ -8,6 +8,20 @@
    
    =============================================================================*/
 
+
+/* Cuadro de Permisos:
+-
++-------------+------------------+----------------------------+------------------+------------------+---------------------------+
+| Rol         | Geo              | Torneo                     | Persona          | Publicidad       | Importacion               |
++-------------+------------------+----------------------------+------------------+------------------+---------------------------+
+| Organizador | Execute / Select | Execute / Select           | Select           | Select           | -                         |
+| Planteles   | Select           | Execute (Parcial) / Select | Execute / Select | -                | -                         |
+| Operador    | -                | Execute (Parcial) / Select | Select           | -                | -                         |
+| Comercial   | Select           | Select (Parcial)           | -                | Execute          | -                         |
+| Importador  | -                | -                          | -                | -                | Execute / Select / Insert |
++-------------+------------------+----------------------------+------------------+------------------+---------------------------+
+*/
+
 -- 1. Creacion de los Logins
 USE master;
 GO
