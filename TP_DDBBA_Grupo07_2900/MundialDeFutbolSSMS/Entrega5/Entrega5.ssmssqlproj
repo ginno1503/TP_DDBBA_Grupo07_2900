@@ -137,6 +137,18 @@
           <AssociatedConnUserName />
           <FullPath>09_Test_Negocio.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLFile1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLFile1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLFile2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:ANDRESLEEN\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>ANDRESLEEN\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLFile2.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Varios" Type="3" Sorted="true">

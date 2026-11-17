@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\20_Reportes.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
-      "RelativeMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|solutionrelative:Entrega7\\20_Reportes.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+      "AbsoluteMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\21_Eliminar_Login_Roles_Usuarios.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|solutionrelative:Entrega8\\21_Eliminar_Login_Roles_Usuarios.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\19_SeedDeDatos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
-      "RelativeMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|solutionrelative:Entrega7\\19_SeedDeDatos.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+      "AbsoluteMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\21_Login_Roles_Usuarios.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|solutionrelative:Entrega8\\21_Login_Roles_Usuarios.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\21_Test_Login_Roles_Usuarios.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|solutionrelative:Entrega8\\21_Test_Login_Roles_Usuarios.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\22_Encriptacion.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{54ECE1F3-19C8-F274-D554-39EA55915555}|Entrega8\\Entrega8.ssmssqlproj|solutionrelative:Entrega8\\22_Encriptacion.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\20_Reportes.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{503A509A-EBE2-0F53-3446-919403D201E4}|Entrega7\\Entrega7.ssmssqlproj|solutionrelative:Entrega7\\20_Reportes.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,34 +30,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20_Reportes.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (99))",
+              "DocumentIndex": 4,
+              "Title": "20_Reportes.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (90))",
               "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\20_Reportes.sql",
               "RelativeDocumentMoniker": "Entrega7\\20_Reportes.sql",
-              "ToolTip": "20_Reportes.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (99))",
+              "ToolTip": "20_Reportes.sql - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (90))",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-11-10T15:51:38.757Z",
-              "IsPinned": true,
-              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (99))"
+              "WhenOpened": "2026-11-14T23:04:40.885Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.MundialFutbol (ANDRESLEEN\\golde (90))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "22_Encriptacion.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (57))",
+              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\22_Encriptacion.sql",
+              "RelativeDocumentMoniker": "Entrega8\\22_Encriptacion.sql",
+              "ToolTip": "22_Encriptacion.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (57))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-14T00:04:43.609Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (57))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "21_Test_Login_Roles_Usuarios.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (58))",
+              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\21_Test_Login_Roles_Usuarios.sql",
+              "RelativeDocumentMoniker": "Entrega8\\21_Test_Login_Roles_Usuarios.sql",
+              "ToolTip": "21_Test_Login_Roles_Usuarios.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (58))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-14T00:04:42.232Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (58))"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "19_SeedDeDatos.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (73))",
-              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega7\\19_SeedDeDatos.sql",
-              "RelativeDocumentMoniker": "Entrega7\\19_SeedDeDatos.sql",
-              "ToolTip": "19_SeedDeDatos.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (73))",
+              "Title": "21_Login_Roles_Usuarios.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (62))",
+              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\21_Login_Roles_Usuarios.sql",
+              "RelativeDocumentMoniker": "Entrega8\\21_Login_Roles_Usuarios.sql",
+              "ToolTip": "21_Login_Roles_Usuarios.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (62))",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-11-10T19:36:04.041Z",
-              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (73))"
+              "WhenOpened": "2026-11-14T00:04:40.531Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (62))"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "21_Eliminar_Login_Roles_Usuarios.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (63))",
+              "DocumentMoniker": "C:\\Users\\golde\\Documents\\Universidad\\BDA_TP\\TP_DDBBA_Grupo07_2900\\TP_DDBBA_Grupo07_2900\\MundialDeFutbolSSMS\\Entrega8\\21_Eliminar_Login_Roles_Usuarios.sql",
+              "RelativeDocumentMoniker": "Entrega8\\21_Eliminar_Login_Roles_Usuarios.sql",
+              "ToolTip": "21_Eliminar_Login_Roles_Usuarios.sql - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (63))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-14T00:03:58.445Z",
+              "EditorCaption": " - ANDRESLEEN\\SQLEXPRESS.master (ANDRESLEEN\\golde (63))"
             }
           ]
         }

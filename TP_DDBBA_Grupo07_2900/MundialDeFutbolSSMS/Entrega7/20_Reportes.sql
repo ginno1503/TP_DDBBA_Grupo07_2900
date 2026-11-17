@@ -30,6 +30,10 @@ IF SCHEMA_ID('reportes') IS NULL
     EXEC ('CREATE SCHEMA reportes');
 GO
 
+
+SELECT * FROM torneo.Sede
+SELECT * FROM geo.Ciudad
+
 -- =====================================================================
 -- 1. Reporte de Goleadores por Selección Fase y torneo. 
 -- =====================================================================
@@ -66,7 +70,7 @@ BEGIN
     FROM RankingGoleadores r
     JOIN personas.Participante info ON r.id_jugador_autor = info.id_participante
     WHERE r.Puesto = 1
-    FOR XML AUTO, ROOT ('GoleadoresPorSeleccion'), ELEMENTS;
+    --FOR XML AUTO, ROOT ('GoleadoresPorSeleccion'), ELEMENTS;
 
 END;
 GO
@@ -109,7 +113,7 @@ BEGIN
     FROM RankingGoleadores r 
     JOIN personas.Participante info ON r.id_jugador_autor = info.id_participante
     WHERE r.Puesto = 1
-    FOR XML AUTO, ROOT('GoleadoresPorFase'), ELEMENTS;
+    --FOR XML AUTO, ROOT('GoleadoresPorFase'), ELEMENTS;
 
 END;
 GO
