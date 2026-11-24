@@ -11,15 +11,16 @@
 
 /* Cuadro de Permisos:
 -
-+-------------+------------------+----------------------------+------------------+------------------+---------------------------+
-| Rol         | Geo              | Torneo                     | Persona          | Publicidad       | Importacion               |
-+-------------+------------------+----------------------------+------------------+------------------+---------------------------+
-| Organizador | Execute / Select | Execute / Select           | Select           | Select           | -                         |
-| Planteles   | Select           | Execute (Parcial) / Select | Execute / Select | -                | -                         |
-| Operador    | -                | Execute (Parcial) / Select | Select           | -                | -                         |
-| Comercial   | Select           | Select (Parcial)           | -                | Execute          | -                         |
-| Importador  | -                | -                          | -                | -                | Execute / Select / Insert |
-+-------------+------------------+----------------------------+------------------+------------------+---------------------------+
++-------------+------------------+----------------------------+------------------+------------------+---------------------------+------------------+
+| Rol         | Geo              | Torneo                     | Persona          | Publicidad       | Importacion               | Reportes         |
++-------------+------------------+----------------------------+------------------+------------------+---------------------------+------------------+
+| Organizador | Execute / Select | Execute / Select           | Select           | Select           | -                         | -                |
+| Planteles   | Select           | Execute (Parcial) / Select | Execute / Select | -                | -                         | -                |
+| Operador    | -                | Execute (Parcial) / Select | Select           | -                | -                         | -                |
+| Comercial   | Select           | Select (Parcial)           | -                | Execute          | -                         | -                |
+| Importador  | -                | -                          | -                | -                | Execute / Select / Insert | -                |
+| Reportes    | -                | -                          | -                | -                | -                         | Execute          |
++-------------+------------------+----------------------------+------------------+------------------+---------------------------+------------------+
 */
 
 -- 1. Creacion de los Logins
@@ -35,7 +36,9 @@ IF NOT EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'comercial')
     CREATE LOGIN comercial WITH PASSWORD = 'Temporal#Com2026!', CHECK_POLICY = ON;
 IF NOT EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'importador')
     CREATE LOGIN importador WITH PASSWORD = 'Temporal#Imp2026!', CHECK_POLICY = ON;
-
+IF NOT EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'reportes')
+    CREATE LOGIN reportes WITH PASSWORD = 'Temporal#Rep2026!', CHECK_POLICY = ON;
+GO
 
 
 -- 2. Creacion de los Usuarios
@@ -51,6 +54,8 @@ IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'comercial')
     CREATE USER comercial FOR LOGIN comercial;
 IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'importador')
     CREATE USER importador FOR LOGIN importador;
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'reportes')
+    CREATE USER reportes FOR LOGIN reportes;
 GO
 
 -- 3. Creacion de Roles y asignacion de permisos.
@@ -59,6 +64,7 @@ IF DATABASE_PRINCIPAL_ID('rol_planteles') IS NULL CREATE ROLE rol_planteles;
 IF DATABASE_PRINCIPAL_ID('rol_operador') IS NULL CREATE ROLE rol_operador;
 IF DATABASE_PRINCIPAL_ID('rol_publicidad') IS NULL CREATE ROLE rol_publicidad;
 IF DATABASE_PRINCIPAL_ID('rol_importacion') IS NULL CREATE ROLE rol_importacion;
+IF DATABASE_PRINCIPAL_ID('rol_reportes') IS NULL CREATE ROLE rol_reportes;
 GO
 
 -- rol_organizador: administra el torneo. Sedes, selecciones, partidos,
@@ -108,12 +114,19 @@ GRANT SELECT ON SCHEMA::importacion TO rol_importacion;
 GRANT INSERT ON OBJECT::importacion.JsonCarga TO rol_importacion;
 GRANT INSERT ON OBJECT::importacion.GolCarga TO rol_importacion;
 
+-- rol_reportes (Entrega 7): solo consulta de reportes. Ejecuta los SP del esquema reportes
+-- (goleadores, tarjetas, designaciones arbitrales, ocupacion publicitaria, matriz de prime time,
+-- plantillas y resultados).
+GRANT EXECUTE ON SCHEMA::reportes TO rol_reportes;
+
+
 -- 4. Asignacion de roles a usuarios
 ALTER ROLE rol_organizador ADD MEMBER organizador;
 ALTER ROLE rol_planteles ADD MEMBER planteles;
 ALTER ROLE rol_operador ADD MEMBER operador;
 ALTER ROLE rol_publicidad ADD MEMBER comercial;
 ALTER ROLE rol_importacion ADD MEMBER importador;
+ALTER ROLE rol_reportes ADD MEMBER reportes;
 GO
 
 -- Consultar los SP de un Esquema en especifico
@@ -124,7 +137,7 @@ SELECT
 FROM 
     sys.procedures
 WHERE 
-    SCHEMA_NAME(schema_id) = 'torneo' -- Reemplaza con el nombre de tu schema
+    SCHEMA_NAME(schema_id) = 'torneo' -- Reemplaza con el nombre del schema
 ORDER BY 
     name;
 GO*/
