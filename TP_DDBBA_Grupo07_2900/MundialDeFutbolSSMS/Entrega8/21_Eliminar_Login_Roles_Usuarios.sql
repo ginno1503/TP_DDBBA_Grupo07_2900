@@ -18,6 +18,7 @@ IF DATABASE_PRINCIPAL_ID('planteles') IS NOT NULL DROP USER planteles;
 IF DATABASE_PRINCIPAL_ID('operador') IS NOT NULL DROP USER operador;
 IF DATABASE_PRINCIPAL_ID('comercial') IS NOT NULL DROP USER comercial;
 IF DATABASE_PRINCIPAL_ID('importador') IS NOT NULL DROP USER importador;
+IF DATABASE_PRINCIPAL_ID('reportes') IS NOT NULL DROP USER reportes;
 GO
  
 -- 2) Roles de la base (los permisos otorgados a cada rol se eliminan con el rol)
@@ -26,6 +27,7 @@ IF DATABASE_PRINCIPAL_ID('rol_planteles') IS NOT NULL DROP ROLE rol_planteles;
 IF DATABASE_PRINCIPAL_ID('rol_operador') IS NOT NULL DROP ROLE rol_operador;
 IF DATABASE_PRINCIPAL_ID('rol_publicidad') IS NOT NULL DROP ROLE rol_publicidad;
 IF DATABASE_PRINCIPAL_ID('rol_importacion') IS NOT NULL DROP ROLE rol_importacion;
+IF DATABASE_PRINCIPAL_ID('rol_reportes') IS NOT NULL DROP ROLE rol_reportes;
 GO
  
 -- 3) Logins del servidor (al borrar importador tambien se pierde su permiso ADMINISTER BULK OPERATIONS)
@@ -36,4 +38,5 @@ IF EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'planteles') DROP LO
 IF EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'operador') DROP LOGIN operador;
 IF EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'comercial') DROP LOGIN comercial;
 IF EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'importador') DROP LOGIN importador;
+IF EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'reportes') DROP LOGIN reportes;
 GO
